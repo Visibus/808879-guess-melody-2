@@ -1,5 +1,5 @@
 import React from "react";
-import {number} from "prop-types";
+import PropTypes from "prop-types";
 
 const WelcomeScreen = (props) => {
   const {time, errorCount} = props;
@@ -19,6 +19,8 @@ const WelcomeScreen = (props) => {
   </section>;
 };
 
-WelcomeScreen.propTypes = {time: number, errorCount: number};
+WelcomeScreen.propTypes = {
+  time: PropTypes.number.isRequired,
+  errorCount: PropTypes.number.isRequired};
 
 export default WelcomeScreen;
